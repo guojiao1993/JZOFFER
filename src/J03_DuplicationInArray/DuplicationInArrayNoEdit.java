@@ -5,7 +5,7 @@ package J03_DuplicationInArray;
  * <p>题目：在一个长度为n+1的数组里的所有数字都在1到n的范围内，所以数组中至
  * 少有一个数字是重复的。请找出数组中任意一个重复的数字，但不能修改输入的
  * 数组。例如，如果输入长度为8的数组{2, 3, 5, 4, 3, 2, 6, 7}，那么对应的
- * 输出是重复的数字2或者3。</p>
+ * 输出是重复的数字2或者3。
  */
 public class DuplicationInArrayNoEdit {
 
@@ -13,7 +13,7 @@ public class DuplicationInArrayNoEdit {
      * @param numbers 一个整数数组
      * @param length  数组的长度
      * @return 正数  - 输入有效，并且数组中存在重复的数字，返回值为重复的数字
-     * <p>负数  - 输入无效，或者数组中没有重复的数字</p>
+     * <p>负数  - 输入无效，或者数组中没有重复的数字
      */
     static int getDuplication(int[] numbers, int length) {
         if (numbers == null || length <= 0) {
