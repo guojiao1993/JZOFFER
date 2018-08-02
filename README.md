@@ -29,3 +29,21 @@ public boolean isSubtree(TreeNode root1, TreeNode root2) {
     return isSubtree(root1.left, root2.left) && isSubtree(root1.right, root2.right);
 }
 ```
+[牛客网OJ](https://www.nowcoder.com/practice/6e196c44c7004d15b1610b9afca8bd88?tpId=13&tqId=11170&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+## 第4章 解决面试题的思路
+### 画图让抽象问题形象化
+**面试题27：二叉树的镜像**  
+- 使用递归
+```java
+public void Mirror(TreeNode root) {
+    if(root == null) {
+        return;
+    }
+    TreeNode temp = root.left;
+    root.left = root.right;
+    root.right = temp;
+    Mirror(root.left);
+    Mirror(root.right);
+}
+```
+[牛客网OJ](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011?tpId=13&tqId=11171&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
