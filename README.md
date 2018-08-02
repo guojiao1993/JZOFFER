@@ -47,3 +47,27 @@ public void Mirror(TreeNode root) {
 }
 ```
 [牛客网OJ](https://www.nowcoder.com/practice/564f4c26aa584921bc75623e48ca3011?tpId=13&tqId=11171&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
+
+**面试题28：对称的二叉树**  
+- 使用递归
+- 定义一种新的遍历方式“对称前序遍历”：先访问根节点，再访问右节点，最后访问左节点
+- 比较前序遍历的值和“对称的前序遍历”的值是否完全相同
+```java
+boolean isSymmetrical(TreeNode pRoot) {
+    return isSymmetricalUsingRecursion(pRoot, pRoot);
+}
+
+boolean isSymmetricalUsingRecursion(TreeNode tn1, TreeNode tn2) {
+    if (tn1 == null && tn2 == null) {
+        return true;
+    }
+    if ((tn1 == null && tn2 != null) || (tn1 != null && tn2 == null)) {
+        return false;
+    }
+    if (tn1.val != tn2.val) {
+        return false;
+    }
+    return isSymmetricalUsingRecursion(tn1.left, tn2.right) && isSymmetricalUsingRecursion(tn1.right, tn2.left);
+}
+```
+[牛客网OJ](https://www.nowcoder.com/practice/ff05d44dfdb04e1d83bdbdab320efbcb?tpId=13&tqId=11211&tPage=1&rp=1&ru=/ta/coding-interviews&qru=/ta/coding-interviews/question-ranking)
